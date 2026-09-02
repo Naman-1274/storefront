@@ -13,6 +13,7 @@ export const router = createBrowserRouter([
       { path: "product/:id", lazy: () => import("@/features/product/ProductPage") },
       { path: "checkout/:step", lazy: () => import("@/features/checkout/CheckoutPage") },
       { path: "orders", lazy: () => import("@/features/orders/OrdersPage") },
+      { path: "product/:id/:slug?", lazy: () => import("@/features/product/ProductPage") },
       { path: "*", element: <NotFound /> },
     ],
   },

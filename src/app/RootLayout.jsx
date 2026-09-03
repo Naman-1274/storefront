@@ -1,6 +1,7 @@
 // RootLayout.jsx
 import { Outlet } from "react-router"
 import { CartButton } from "@/features/cart/CartButton"
+import { AuthStatus } from "@/features/auth/AuthStatus"
 
 
 export default function RootLayout() {
@@ -8,7 +9,10 @@ export default function RootLayout() {
     <div>
       <header className="p-4 border-b flex justify-between items-center">
         <span>StoreFront</span>
-        <CartButton />
+        <div className="flex items-center gap-4">
+          <AuthStatus />
+          <CartButton />
+        </div>
       </header>
       <Outlet />
     </div>

@@ -5,6 +5,7 @@ import { keys } from "@/lib/query"
 import { formatINR } from "@/lib/money"
 import { ProductGallery } from "./ProductGallery"
 import { Skeleton } from "@/components/ui/skeleton"
+import { AddToCartControl } from "@/features/cart/AddToCartControl"
 
 export function Component() {
   const { id } = useParams()
@@ -67,6 +68,10 @@ export function Component() {
               ? `${product.stock} in stock`
               : <span className="text-red-600">Out of stock</span>}
           </p>
+          
+          <div className="mt-4">
+            <AddToCartControl product={product} />
+          </div>
         </div>
       </div>
     </div>
